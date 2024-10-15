@@ -471,7 +471,6 @@ class _LargeItem extends StatelessWidget {
         : ElementSize.resolveLarge(context);
 
     final isInAccessibilityMode = TextUtils.isInAccessibilityMode(context);
-    final maxLines = isInAccessibilityMode ? 3 : 2;
 
     var resolvedColor = iconColor ?? titleStyle.color!;
     var resolvedStyle = titleStyle;
@@ -502,7 +501,7 @@ class _LargeItem extends StatelessWidget {
       textAlign: TextAlign.start,
       overflow: TextOverflow.ellipsis,
       softWrap: false,
-      maxLines: maxLines,
+      maxLines: 1,
     );
 
     if (subtitle != null) {
@@ -517,7 +516,7 @@ class _LargeItem extends StatelessWidget {
             textAlign: TextAlign.start,
             overflow: TextOverflow.ellipsis,
             softWrap: false,
-            maxLines: maxLines,
+            maxLines: 1,
           ),
         ],
       );

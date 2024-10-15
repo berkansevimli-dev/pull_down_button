@@ -191,7 +191,7 @@ class _HeaderBody extends StatelessWidget {
     final minHeight = ElementSize.resolveLargeWithSubtitle(context);
 
     final isInAccessibilityMode = TextUtils.isInAccessibilityMode(context);
-    final maxLines = isInAccessibilityMode ? 3 : 2;
+    const maxLines = 1;
 
     Widget body = Text(
       title,
